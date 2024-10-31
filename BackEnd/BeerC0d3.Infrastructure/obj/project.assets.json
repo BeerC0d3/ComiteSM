@@ -2,6 +2,35 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "Dapper/2.1.15": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/Dapper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/Dapper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Dapper.Transaction/2.0.143": {
+        "type": "package",
+        "dependencies": {
+          "Dapper": "2.0.143"
+        },
+        "compile": {
+          "lib/net5.0/Dapper.Transaction.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/Dapper.Transaction.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "EntityFramework/6.4.4": {
         "type": "package",
         "dependencies": {
@@ -915,6 +944,42 @@
     }
   },
   "libraries": {
+    "Dapper/2.1.15": {
+      "sha512": "1aWSAosZymEM+mRwfrXteRIN74/JTUjqj9B/KqEbanH6vfUKy9D9cemRN0q1ZOEfSB7d1PpFTpVOCbf2Uv70Og==",
+      "type": "package",
+      "path": "dapper/2.1.15",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Dapper.png",
+        "dapper.2.1.15.nupkg.sha512",
+        "dapper.nuspec",
+        "lib/net461/Dapper.dll",
+        "lib/net461/Dapper.xml",
+        "lib/net5.0/Dapper.dll",
+        "lib/net5.0/Dapper.xml",
+        "lib/netstandard2.0/Dapper.dll",
+        "lib/netstandard2.0/Dapper.xml",
+        "readme.md"
+      ]
+    },
+    "Dapper.Transaction/2.0.143": {
+      "sha512": "TBMICwaSo2EpZ8nc8VXYa0RTwjl8eZuL52fH4RXpxNGiCKNovS8MWBLU+JSHUE7893jXdVj6L61+s9LXphsO/A==",
+      "type": "package",
+      "path": "dapper.transaction/2.0.143",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "dapper.transaction.2.0.143.nupkg.sha512",
+        "dapper.transaction.nuspec",
+        "lib/net461/Dapper.Transaction.dll",
+        "lib/net461/Dapper.Transaction.xml",
+        "lib/net5.0/Dapper.Transaction.dll",
+        "lib/net5.0/Dapper.Transaction.xml",
+        "lib/netstandard2.0/Dapper.Transaction.dll",
+        "lib/netstandard2.0/Dapper.Transaction.xml"
+      ]
+    },
     "EntityFramework/6.4.4": {
       "sha512": "yj1+/4tci7Panu3jKDHYizxwVm0Jvm7b7m057b5h4u8NUHGCR8WIWirBTw+8EptRffwftIWPBeIRGNKD1ewEMQ==",
       "type": "package",
@@ -2461,6 +2526,8 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "BeerC0d3.Core >= 1.0.0",
+      "Dapper >= 2.1.15",
+      "Dapper.Transaction >= 2.0.143",
       "EntityFramework >= 6.4.4",
       "Microsoft.EntityFrameworkCore >= 6.0.10",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.10",
@@ -2468,19 +2535,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\diego.luna\\.nuget\\packages\\": {}
+    "C:\\Users\\Diego.Luna\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\ProyectosDiego\\BeerC0d3\\BeerC0d3.Template.NetCore\\BeerC0d3.Infrastructure\\BeerC0d3.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Development\\Diego\\ComiteSM\\BackEnd\\BeerC0d3.Infrastructure\\BeerC0d3.Infrastructure.csproj",
       "projectName": "BeerC0d3.Infrastructure",
-      "projectPath": "C:\\ProyectosDiego\\BeerC0d3\\BeerC0d3.Template.NetCore\\BeerC0d3.Infrastructure\\BeerC0d3.Infrastructure.csproj",
-      "packagesPath": "C:\\Users\\diego.luna\\.nuget\\packages\\",
-      "outputPath": "C:\\ProyectosDiego\\BeerC0d3\\BeerC0d3.Template.NetCore\\BeerC0d3.Infrastructure\\obj\\",
+      "projectPath": "C:\\Development\\Diego\\ComiteSM\\BackEnd\\BeerC0d3.Infrastructure\\BeerC0d3.Infrastructure.csproj",
+      "packagesPath": "C:\\Users\\Diego.Luna\\.nuget\\packages\\",
+      "outputPath": "C:\\Development\\Diego\\ComiteSM\\BackEnd\\BeerC0d3.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\diego.luna\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Diego.Luna\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2494,8 +2561,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\ProyectosDiego\\BeerC0d3\\BeerC0d3.Template.NetCore\\BeerC0d3.Core\\BeerC0d3.Core.csproj": {
-              "projectPath": "C:\\ProyectosDiego\\BeerC0d3\\BeerC0d3.Template.NetCore\\BeerC0d3.Core\\BeerC0d3.Core.csproj"
+            "C:\\Development\\Diego\\ComiteSM\\BackEnd\\BeerC0d3.Core\\BeerC0d3.Core.csproj": {
+              "projectPath": "C:\\Development\\Diego\\ComiteSM\\BackEnd\\BeerC0d3.Core\\BeerC0d3.Core.csproj"
             }
           }
         }
@@ -2504,12 +2571,25 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "Dapper": {
+            "target": "Package",
+            "version": "[2.1.15, )"
+          },
+          "Dapper.Transaction": {
+            "target": "Package",
+            "version": "[2.0.143, )"
+          },
           "EntityFramework": {
             "target": "Package",
             "version": "[6.4.4, )"
@@ -2545,7 +2625,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
       }
     }
   }

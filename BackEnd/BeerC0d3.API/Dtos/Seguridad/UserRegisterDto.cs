@@ -16,8 +16,7 @@ namespace BeerC0d3.API.Dtos.Seguridad
         public string Username { get; set; }
         [Required]
         public string Password { get; set; }
-
-       
         public string FotoUrl { get; set; }
+        public string Roles { get; set; }
     }
 }

@@ -37,5 +37,13 @@ namespace BeerC0d3.Infrastructure.Repositories.Seguridad
                                 .Include(u => u.Roles)
                                 .FirstOrDefaultAsync(u => u.Id == userId);
         }
+
+        public async Task<ICollection<Usuario>> GetUsuariosActive()
+        {
+            return await _context.Usuarios
+                                .Include(u => u.Roles)
+                                .Where(item=> item.Activo)
+                                .ToListAsync();
+        }
     }
 }

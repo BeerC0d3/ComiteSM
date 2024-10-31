@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Primitives;
 using System.Security.Claims;
 
 namespace BeerC0d3.API.Helpers
@@ -25,7 +26,13 @@ namespace BeerC0d3.API.Helpers
             set { }
             get { return this.getValueClaim(ClaimUser.UserId); }
         }
-
+        public int PoID
+        {
+            get
+            {
+                return getPoID();
+            }
+        }
 
 
         private int getValueClaim(ClaimUser claim)
@@ -37,6 +44,14 @@ namespace BeerC0d3.API.Helpers
             var identity = ((ClaimsIdentity)_httpContext.User.Identity).Claims.Where(x => x.Type == claim.ToString()).FirstOrDefault();
             if (identity != null)
                 value = int.Parse(identity.Value);
+
+            return value;
+        }
+        private int getPoID()
+        {
+            int value = 0;
+            _httpContext.Request.Headers.TryGetValue("x-header-poId", out StringValues headerValue);
+            value = int.Parse(headerValue);
 
             return value;
         }

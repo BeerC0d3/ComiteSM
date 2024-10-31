@@ -1,5 +1,10 @@
-﻿using BeerC0d3.API.Dtos.Seguridad;
+﻿using AutoMapper;
+using BeerC0d3.API.Dtos.Comite.Periodos;
+using BeerC0d3.API.Dtos.Seguridad;
+using BeerC0d3.API.Helpers;
 using BeerC0d3.API.Services.Seguridad;
+using BeerC0d3.Core.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,11 +14,15 @@ namespace BeerC0d3.API.Controllers
     public class UsuariosController : BaseApiController
     {
         private readonly IUserService _userService;
+        private readonly IUnitOfWork _unitOfWork;
+        private readonly IMapper _mapper;
 
-        public UsuariosController(IUserService userService)
+        public UsuariosController(IUserService userService,IUnitOfWork unitOfWork,IMapper mapper)
         {
 
             _userService = userService;
+            _unitOfWork = unitOfWork;
+            _mapper = mapper;
         }
 
         [HttpPost("register")]
@@ -32,6 +41,30 @@ namespace BeerC0d3.API.Controllers
 
             SetRefreshTokenInCookie(result.RefreshToken);
             return Ok(result);
+        }
+
+        [Authorize]
+        [HttpGet("GetUsuarios")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<ActionResult<List<UsuarioDto>>> GetUsuarios()
+        {
+
+
+            var result = await _userService.GetUsuariosActive();
+            return _mapper.Map<List<UsuarioDto>>(result);
+        }
+
+        [Authorize]
+        [HttpGet("GetRoles")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<ActionResult<List<RolDto>>> GetRoles()
+        {
+
+
+            var result = await _unitOfWork.Roles.GetAllAsync();
+            return _mapper.Map<List<RolDto>>(result);
         }
 
         [HttpPost("refresh-token")]

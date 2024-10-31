@@ -1,0 +1,32 @@
+import { boot } from 'quasar/wrappers';
+import Header from '../components/Header.vue';
+import Footer from '../components/Footer.vue';
+import Body from '../components/Body.vue';
+import BodyHeader from '../components/BodyHeader.vue';
+import BodyCustom from '../components/Body-Custom.vue';
+import Drawer from '../components/Drawer.vue';
+import HeaderBtnBack from '../components/HeaderButtonBack.vue';
+import Periodo from '../app/components/Periodos/SetPeriodo.vue';
+import ModalMessage from '../components/ModalMessage.vue';
+import ModalForm from '../components/ModalForm.vue';
+import ModalBottom from '../components/ModalBottom.vue';
+import ModalMaximized from '../components/ModalMaximized.vue';
+import HeaderAmount from '../components/HeaderAmount.vue';
+import EmptyData from '../components/EmptyData.vue';
+
+export default boot(async ({ app }) => {
+  app.component('page-header', Header);
+  app.component('page-body', Body);
+  app.component('page-body-header', BodyHeader);
+  app.component('page-body-custom', BodyCustom);
+  app.component('page-header-btn-back', HeaderBtnBack);
+  app.component('page-footer', Footer);
+  app.component('page-drawer', Drawer);
+  app.component('page-periodo', Periodo);
+  app.component('modal-message', ModalMessage);
+  app.component('modal-form', ModalForm);
+  app.component('header-amount', HeaderAmount);
+  app.component('empty-data', EmptyData);
+  app.component('modal-bottom', ModalBottom);
+  app.component('modal-maximized', ModalMaximized);
+});

@@ -1,5 +1,10 @@
 ﻿using BeerC0d3.API.Helpers;
 using BeerC0d3.API.Helpers.Errors;
+using BeerC0d3.API.Services.Comite.Periodos;
+using BeerC0d3.API.Services.Comite.Personas;
+using BeerC0d3.API.Services.Comite.ReportesPdf;
+using BeerC0d3.API.Services.Comite.Secciones;
+using BeerC0d3.API.Services.Comite.VentaBoletoBus;
 using BeerC0d3.API.Services.Seguridad;
 using BeerC0d3.API.Services.Sistema;
 using BeerC0d3.Core.Entities.Seguridad;
@@ -31,18 +36,18 @@ namespace BeerC0d3.API.Extensions
                     .WithHeaders(
                       HeaderNames.Accept,
                       HeaderNames.ContentType,
-                      HeaderNames.Authorization)
+                      HeaderNames.Authorization, "x-header-poId")
                     .WithOrigins("http://localhost:9000/")
                     .AllowCredentials()
-                    .SetIsOriginAllowed(origin =>
-                    {
-                        if (string.IsNullOrWhiteSpace(origin)) return false;
-                        // Only add this to allow testing with localhost, remove this line in production!
-                        if (origin.ToLower().StartsWith("http://localhost")) return true;
-                        // Insert your production domain here.
-                        if (origin.ToLower().StartsWith("https://dev.mydomain.com")) return true;
-                        return false;
-                    }));
+                    .SetIsOriginAllowed(host => true));
+                    //{
+                    //    if (string.IsNullOrWhiteSpace(origin)) return false;
+                    //    // Only add this to allow testing with localhost, remove this line in production!
+                    //    if (origin.ToLower().StartsWith("http://localhost")) return true;
+                    //    // Insert your production domain here.
+                    //    if (origin.ToLower().StartsWith("https://dev.mydomain.com")) return true;
+                    //    return false;
+                    //}));
 
 
           });
@@ -53,7 +58,13 @@ namespace BeerC0d3.API.Extensions
             services.AddScoped<IPasswordHasher<Usuario>, PasswordHasher<Usuario>>();
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IMenuService, MenuService>();
+            services.AddScoped<IPeriodoService, PeriodoService>();
+            services.AddScoped<ISeccionService, SeccionService>();
+            services.AddScoped<IPersonaService, PersonaService>();
+            services.AddScoped<IVentaBoletoBusService, VentaBoletoBusService>();
+            services.AddScoped<IGeneratePdfService, ReporteCoopIntegranteService>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+           
         }
 
         public static void AddJwt(this IServiceCollection services, IConfiguration configuration)

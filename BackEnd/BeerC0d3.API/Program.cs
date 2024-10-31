@@ -17,6 +17,7 @@ builder.Logging.AddSerilog(logger);
 
 builder.Services.AddAutoMapper(Assembly.GetEntryAssembly());
 
+QuestPDF.Settings.License = QuestPDF.Infrastructure.LicenseType.Community;
 // Add services to the container.
 builder.Services.ConfigureCors();
 builder.Services.AddAplicacionServices();

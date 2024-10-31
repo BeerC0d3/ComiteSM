@@ -1,0 +1,185 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Development\\Diego\\ComiteSM\\BackEnd\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D0C13F7E-AD2C-46FE-AD89-124A024E58DC}|BeerC0d3.API\\BeerC0d3.API.csproj|c:\\development\\diego\\comitesm\\backend\\beerc0d3.api\\controllers\\seccionescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0C13F7E-AD2C-46FE-AD89-124A024E58DC}|BeerC0d3.API\\BeerC0d3.API.csproj|solutionrelative:beerc0d3.api\\controllers\\seccionescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0C13F7E-AD2C-46FE-AD89-124A024E58DC}|BeerC0d3.API\\BeerC0d3.API.csproj|c:\\development\\diego\\comitesm\\backend\\beerc0d3.api\\controllers\\periodoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0C13F7E-AD2C-46FE-AD89-124A024E58DC}|BeerC0d3.API\\BeerC0d3.API.csproj|solutionrelative:beerc0d3.api\\controllers\\periodoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0C13F7E-AD2C-46FE-AD89-124A024E58DC}|BeerC0d3.API\\BeerC0d3.API.csproj|c:\\development\\diego\\comitesm\\backend\\beerc0d3.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D0C13F7E-AD2C-46FE-AD89-124A024E58DC}|BeerC0d3.API\\BeerC0d3.API.csproj|solutionrelative:beerc0d3.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0C13F7E-AD2C-46FE-AD89-124A024E58DC}|BeerC0d3.API\\BeerC0d3.API.csproj|c:\\development\\diego\\comitesm\\backend\\beerc0d3.api\\services\\comite\\reportespdf\\reportecoopintegranteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0C13F7E-AD2C-46FE-AD89-124A024E58DC}|BeerC0d3.API\\BeerC0d3.API.csproj|solutionrelative:beerc0d3.api\\services\\comite\\reportespdf\\reportecoopintegranteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0C13F7E-AD2C-46FE-AD89-124A024E58DC}|BeerC0d3.API\\BeerC0d3.API.csproj|c:\\development\\diego\\comitesm\\backend\\beerc0d3.api\\services\\sistema\\menuservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0C13F7E-AD2C-46FE-AD89-124A024E58DC}|BeerC0d3.API\\BeerC0d3.API.csproj|solutionrelative:beerc0d3.api\\services\\sistema\\menuservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0C13F7E-AD2C-46FE-AD89-124A024E58DC}|BeerC0d3.API\\BeerC0d3.API.csproj|c:\\development\\diego\\comitesm\\backend\\beerc0d3.api\\controllers\\reportescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0C13F7E-AD2C-46FE-AD89-124A024E58DC}|BeerC0d3.API\\BeerC0d3.API.csproj|solutionrelative:beerc0d3.api\\controllers\\reportescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0C13F7E-AD2C-46FE-AD89-124A024E58DC}|BeerC0d3.API\\BeerC0d3.API.csproj|c:\\development\\diego\\comitesm\\backend\\beerc0d3.api\\profiles\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0C13F7E-AD2C-46FE-AD89-124A024E58DC}|BeerC0d3.API\\BeerC0d3.API.csproj|solutionrelative:beerc0d3.api\\profiles\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0C13F7E-AD2C-46FE-AD89-124A024E58DC}|BeerC0d3.API\\BeerC0d3.API.csproj|c:\\development\\diego\\comitesm\\backend\\beerc0d3.api\\services\\comite\\reportespdf\\igeneratepdfservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0C13F7E-AD2C-46FE-AD89-124A024E58DC}|BeerC0d3.API\\BeerC0d3.API.csproj|solutionrelative:beerc0d3.api\\services\\comite\\reportespdf\\igeneratepdfservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0C13F7E-AD2C-46FE-AD89-124A024E58DC}|BeerC0d3.API\\BeerC0d3.API.csproj|c:\\development\\diego\\comitesm\\backend\\beerc0d3.api\\dtos\\comite\\personas\\personacooperaciondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0C13F7E-AD2C-46FE-AD89-124A024E58DC}|BeerC0d3.API\\BeerC0d3.API.csproj|solutionrelative:beerc0d3.api\\dtos\\comite\\personas\\personacooperaciondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0C13F7E-AD2C-46FE-AD89-124A024E58DC}|BeerC0d3.API\\BeerC0d3.API.csproj|c:\\development\\diego\\comitesm\\backend\\beerc0d3.api\\controllers\\personascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0C13F7E-AD2C-46FE-AD89-124A024E58DC}|BeerC0d3.API\\BeerC0d3.API.csproj|solutionrelative:beerc0d3.api\\controllers\\personascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SeccionesController.cs",
+              "DocumentMoniker": "C:\\Development\\Diego\\ComiteSM\\BackEnd\\BeerC0d3.API\\Controllers\\SeccionesController.cs",
+              "RelativeDocumentMoniker": "BeerC0d3.API\\Controllers\\SeccionesController.cs",
+              "ToolTip": "C:\\Development\\Diego\\ComiteSM\\BackEnd\\BeerC0d3.API\\Controllers\\SeccionesController.cs",
+              "RelativeToolTip": "BeerC0d3.API\\Controllers\\SeccionesController.cs",
+              "ViewState": "AQIAADgAAAAAAAAAAAAwwCkAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T04:41:40.221Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PeriodosController.cs",
+              "DocumentMoniker": "C:\\Development\\Diego\\ComiteSM\\BackEnd\\BeerC0d3.API\\Controllers\\PeriodosController.cs",
+              "RelativeDocumentMoniker": "BeerC0d3.API\\Controllers\\PeriodosController.cs",
+              "ToolTip": "C:\\Development\\Diego\\ComiteSM\\BackEnd\\BeerC0d3.API\\Controllers\\PeriodosController.cs",
+              "RelativeToolTip": "BeerC0d3.API\\Controllers\\PeriodosController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAACUAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T04:38:57.45Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Development\\Diego\\ComiteSM\\BackEnd\\BeerC0d3.API\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "BeerC0d3.API\\appsettings.Development.json",
+              "ToolTip": "C:\\Development\\Diego\\ComiteSM\\BackEnd\\BeerC0d3.API\\appsettings.Development.json",
+              "RelativeToolTip": "BeerC0d3.API\\appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-31T03:51:19.882Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ReporteCoopIntegranteService.cs",
+              "DocumentMoniker": "C:\\Development\\Diego\\ComiteSM\\BackEnd\\BeerC0d3.API\\Services\\Comite\\ReportesPdf\\ReporteCoopIntegranteService.cs",
+              "RelativeDocumentMoniker": "BeerC0d3.API\\Services\\Comite\\ReportesPdf\\ReporteCoopIntegranteService.cs",
+              "ToolTip": "C:\\Development\\Diego\\ComiteSM\\BackEnd\\BeerC0d3.API\\Services\\Comite\\ReportesPdf\\ReporteCoopIntegranteService.cs",
+              "RelativeToolTip": "BeerC0d3.API\\Services\\Comite\\ReportesPdf\\ReporteCoopIntegranteService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAABOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T03:49:16.08Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MenuService.cs",
+              "DocumentMoniker": "C:\\Development\\Diego\\ComiteSM\\BackEnd\\BeerC0d3.API\\Services\\Sistema\\MenuService.cs",
+              "RelativeDocumentMoniker": "BeerC0d3.API\\Services\\Sistema\\MenuService.cs",
+              "ToolTip": "C:\\Development\\Diego\\ComiteSM\\BackEnd\\BeerC0d3.API\\Services\\Sistema\\MenuService.cs",
+              "RelativeToolTip": "BeerC0d3.API\\Services\\Sistema\\MenuService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACcAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T03:49:16.093Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MappingProfiles.cs",
+              "DocumentMoniker": "C:\\Development\\Diego\\ComiteSM\\BackEnd\\BeerC0d3.API\\Profiles\\MappingProfiles.cs",
+              "RelativeDocumentMoniker": "BeerC0d3.API\\Profiles\\MappingProfiles.cs",
+              "ToolTip": "C:\\Development\\Diego\\ComiteSM\\BackEnd\\BeerC0d3.API\\Profiles\\MappingProfiles.cs",
+              "RelativeToolTip": "BeerC0d3.API\\Profiles\\MappingProfiles.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAADAAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T03:49:16.102Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PersonaCooperacionDto.cs",
+              "DocumentMoniker": "C:\\Development\\Diego\\ComiteSM\\BackEnd\\BeerC0d3.API\\Dtos\\Comite\\Personas\\PersonaCooperacionDto.cs",
+              "RelativeDocumentMoniker": "BeerC0d3.API\\Dtos\\Comite\\Personas\\PersonaCooperacionDto.cs",
+              "ToolTip": "C:\\Development\\Diego\\ComiteSM\\BackEnd\\BeerC0d3.API\\Dtos\\Comite\\Personas\\PersonaCooperacionDto.cs",
+              "RelativeToolTip": "BeerC0d3.API\\Dtos\\Comite\\Personas\\PersonaCooperacionDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T03:49:16.112Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IGeneratePdfService.cs",
+              "DocumentMoniker": "C:\\Development\\Diego\\ComiteSM\\BackEnd\\BeerC0d3.API\\Services\\Comite\\ReportesPdf\\IGeneratePdfService.cs",
+              "RelativeDocumentMoniker": "BeerC0d3.API\\Services\\Comite\\ReportesPdf\\IGeneratePdfService.cs",
+              "ToolTip": "C:\\Development\\Diego\\ComiteSM\\BackEnd\\BeerC0d3.API\\Services\\Comite\\ReportesPdf\\IGeneratePdfService.cs",
+              "RelativeToolTip": "BeerC0d3.API\\Services\\Comite\\ReportesPdf\\IGeneratePdfService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAACMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T03:49:16.12Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ReportesController.cs",
+              "DocumentMoniker": "C:\\Development\\Diego\\ComiteSM\\BackEnd\\BeerC0d3.API\\Controllers\\ReportesController.cs",
+              "RelativeDocumentMoniker": "BeerC0d3.API\\Controllers\\ReportesController.cs",
+              "ToolTip": "C:\\Development\\Diego\\ComiteSM\\BackEnd\\BeerC0d3.API\\Controllers\\ReportesController.cs",
+              "RelativeToolTip": "BeerC0d3.API\\Controllers\\ReportesController.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAswCcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T03:49:16.128Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "PersonasController.cs",
+              "DocumentMoniker": "C:\\Development\\Diego\\ComiteSM\\BackEnd\\BeerC0d3.API\\Controllers\\PersonasController.cs",
+              "RelativeDocumentMoniker": "BeerC0d3.API\\Controllers\\PersonasController.cs",
+              "ToolTip": "C:\\Development\\Diego\\ComiteSM\\BackEnd\\BeerC0d3.API\\Controllers\\PersonasController.cs",
+              "RelativeToolTip": "BeerC0d3.API\\Controllers\\PersonasController.cs",
+              "ViewState": "AQIAAFIAAAAAAAAAAAAcwGYAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T03:49:16.137Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

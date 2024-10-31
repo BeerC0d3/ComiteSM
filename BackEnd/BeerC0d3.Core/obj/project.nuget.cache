@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7XO0NPfw9Bs90v2Zzam4l3DR8F+Cvhp2j2vWiT1D51FAUd6uwW6U94nntW0O29574mvVb/d17M61bxlllhUUKw==",
+  "dgSpecHash": "PAVb2brRYXqQqw/Tu6Ee8htKdH1NIXqOW7s3xrHhDUIP1DYKEPSPLR8Ypxq5hwZZp6gv2PZgFyuERjpNU7X4mQ==",
   "success": true,
-  "projectFilePath": "C:\\ProyectosDiego\\BeerC0d3\\BeerC0d3.Template.NetCore\\BeerC0d3.Core\\BeerC0d3.Core.csproj",
+  "projectFilePath": "C:\\Development\\Diego\\ComiteSM\\BackEnd\\BeerC0d3.Core\\BeerC0d3.Core.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

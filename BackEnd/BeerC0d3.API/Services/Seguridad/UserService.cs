@@ -36,12 +36,16 @@ namespace BeerC0d3.API.Services.Seguridad
                 ApellidoMaterno = registerDto.ApellidoMaterno,
                 ApellidoPaterno = registerDto.ApellidoPaterno,
                 Email = registerDto.Email,
-                Username = registerDto.Username
+                Username = registerDto.Username,
+                Activo = true,
+                FechaActivacion = DateTime.Now,
+                EmailConfirmado = true,
+                FechaRegistro = DateTime.Now
             };
 
             usuario.Password = _passwordHasher.HashPassword(usuario, registerDto.Password);
 
-           // _unitOfWork.CreateTransaction();
+            _unitOfWork.CreateTransaction();
 
             var usuarioExiste = _unitOfWork.Usuarios
                                         .Find(u => u.Username.ToLower() == registerDto.Username.ToLower())
@@ -49,16 +53,28 @@ namespace BeerC0d3.API.Services.Seguridad
 
             if (usuarioExiste == null)
             {
-                var rolPredeterminado = _unitOfWork.Roles
-                                        .Find(u => u.Nombre == Autorizacion.rol_predeterminado.ToString())
-                                        .First();
+                //var rolPredeterminado = _unitOfWork.Roles
+                //                        .Find(u => u.Nombre == Autorizacion.rol_predeterminado.ToString())
+                //                        .First();
                 try
                 {
-                    usuario.Roles.Add(rolPredeterminado);
+
+                    string[] roles = registerDto.Roles.Split(',');
+                    foreach (var rol in roles)
+                    {
+                        var rolPredeterminado = _unitOfWork.Roles
+                                            .Find(u => u.Nombre == rol)
+                                            .First();
+
+                        usuario.Roles.Add(rolPredeterminado);
+                    }
+
+
+                   // usuario.Roles.Add(rolPredeterminado);
                     _unitOfWork.Usuarios.Add(usuario);
                     await _unitOfWork.SaveAsync();
 
-                   // _unitOfWork.Commit();
+                    _unitOfWork.Commit();
 
                     return $"El usuario  {registerDto.Username} ha sido registrado exitosamente";
                 }
@@ -79,6 +95,13 @@ namespace BeerC0d3.API.Services.Seguridad
             DatosUsuarioDto datosUsuarioDto = new DatosUsuarioDto();
             var usuario = await _unitOfWork.Usuarios
                         .GetByUsernameAsync(model.Username);
+            int poId = 0;
+
+            //verificamos si traemos un periodo abierto
+            var catDetalle = await _unitOfWork.catalogoDetalle.GetCatDetalleByClaveAsync("ABIERTO");
+            var periodo = await _unitOfWork.Periodos.GetByEstatusAsync(catDetalle.Id);
+            if(periodo != null)
+                poId = periodo.Id;
 
             if (usuario == null)
             {
@@ -100,6 +123,7 @@ namespace BeerC0d3.API.Services.Seguridad
                 datosUsuarioDto.Roles = usuario.Roles
                                                 .Select(u => u.Nombre)
                                                 .ToList();
+                datosUsuarioDto.poAbiertoId = poId;
 
                 if (usuario.RefreshTokens.Any(a => a.IsActive))
                 {
@@ -206,6 +230,34 @@ namespace BeerC0d3.API.Services.Seguridad
                 expires: DateTime.UtcNow.AddMinutes(_jwt.DurationInMinutes),
                 signingCredentials: signingCredentials);
             return jwtSecurityToken;
+        }
+
+        public async Task<ICollection<UsuarioDto>> GetUsuariosActive()
+        {
+            List<UsuarioDto> listUsuarioDto = new List<UsuarioDto>();
+            var usuarios = await _unitOfWork.Usuarios.GetUsuariosActive();
+
+            foreach (var item in usuarios)
+            {
+                UsuarioDto usuarioDto = new UsuarioDto();
+                usuarioDto.Id = item.Id;
+                usuarioDto.NombreFull = string.Format("{0} {1} {2}", item.Nombre, item.ApellidoPaterno, item.ApellidoMaterno);
+                usuarioDto.Nombre = item.Nombre;
+                usuarioDto.ApellidoPaterno = item.ApellidoPaterno;
+                usuarioDto.ApellidoMaterno = item.ApellidoMaterno;
+                usuarioDto.Username = item.Username;
+                usuarioDto.Email = item.Email;
+                usuarioDto.Roles = String.Join(",", item.Roles
+                                   .Select(u => u.Nombre)
+                                   .ToList());
+
+                listUsuarioDto.Add(usuarioDto);
+
+
+            }
+
+
+            return listUsuarioDto;
         }
     }
 }

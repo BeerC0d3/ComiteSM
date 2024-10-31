@@ -9,5 +9,6 @@ namespace BeerC0d3.API.Services.Seguridad
         //Task<UsuarioInfoDto> GetInfoUsuario(int id);
         //Task<string> AddRoleAsync(AddRoleDto model);
         Task<DatosUsuarioDto> RefreshTokenAsync(string refreshToken);
+        Task<ICollection<UsuarioDto>> GetUsuariosActive();
     }
 }

@@ -1,0 +1,27 @@
+.swiper-item {
+  white-space: nowrap;
+  padding: 1px 12px;
+  border: 1px solid #ededed;
+  border-radius: 95px;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+.overflow-ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.q-chip {
+  height: 1em;
+  background: #fff !important;
+  color: #616161 !important;
+  border: 1px solid #bdbdbd;
+}
+
+.q-chip--selected {
+  background: #3748a6 !important;
+  color: #fff !important;
+}

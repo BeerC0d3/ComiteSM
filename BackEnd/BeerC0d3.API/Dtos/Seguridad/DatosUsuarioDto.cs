@@ -11,6 +11,7 @@ namespace BeerC0d3.API.Dtos.Seguridad
         public string Email { get; set; }
         public List<string> Roles { get; set; }
         public string Token { get; set; }
+        public int poAbiertoId { get; set; }
 
         [JsonIgnore]
         public string RefreshToken { get; set; }

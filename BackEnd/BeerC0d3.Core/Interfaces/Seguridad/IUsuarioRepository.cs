@@ -12,5 +12,6 @@ namespace BeerC0d3.Core.Interfaces.Seguridad
         Task<Usuario> GetByUsernameAsync(string username);
         Task<Usuario> GetByRefreshTokenAsync(string refreshToken);
         Task<Usuario> GetUsuarioRolAsync(int userId);
+        Task<ICollection<Usuario>> GetUsuariosActive();
     }
 }

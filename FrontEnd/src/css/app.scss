@@ -1,0 +1,161 @@
+// app global css in SCSS form
+body {
+  // background-color: #3748a6;
+  background-color: #e9eeff;
+  // background-color: #fff;
+}
+.bg-header {
+  // background-color: #00549a;
+  background-color: #3748a6;
+
+  color: #fff;
+}
+.q-header--bordered {
+  border-bottom: 0px solid rgba(0, 0, 0, 0.12) !important;
+}
+.bg-footer {
+  // background-color: #00549a;
+  background-color: #fff;
+  color: #3f51b5;
+}
+.footer-radius-10 {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+/*Login*/
+.logo-wrapper {
+  padding: 40px 0 40px;
+  margin-bottom: -20px;
+  text-align: center;
+  background: #3748a6;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.logo-wrapper .inner-wrapper img {
+  width: 150px;
+}
+
+.section-area {
+  min-height: calc(100vh - 190px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  padding-top: 10px;
+}
+
+.padding-area {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.card-box {
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0px -15px 26px 0px rgba(0, 0, 0, 0.02);
+  background-color: #fff;
+  position: relative;
+  z-index: 2;
+}
+
+.footer {
+  height: auto;
+  align-items: center;
+  display: flex;
+  z-index: 1;
+  flex-direction: column;
+}
+
+.footer.fixed {
+  width: 100%;
+  left: 0;
+  background-color: #fff !important;
+  bottom: 0;
+  z-index: 999;
+  position: fixed;
+}
+
+.mb-auto {
+  margin-bottom: auto !important;
+}
+
+h1,
+.h1 {
+  font-size: 1.75rem;
+}
+
+h2,
+.h2 {
+  font-size: 1.5rem;
+}
+
+.box-buttons {
+  text-align: center;
+  margin: 25px auto;
+  height: 100%;
+}
+/*Fin login*/
+/*tabs*/
+.q-tab--active {
+  color: #3748a6;
+}
+
+.full-width-50 {
+  width: 45% !important;
+  margin-right: 0.1rem !important;
+}
+.border-raduis-dialog-15 {
+  border-top-right-radius: 15px !important;
+  border-top-left-radius: 15px !important;
+}
+.card-background {
+  background-color: #e9eeff !important;
+}
+.body-header {
+  position: relative;
+  background-color: #3748a6;
+  // height: 200px;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.body-header .body-header-content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  padding: 0 20px 40px;
+}
+
+.body-box {
+  background-color: #e9eeff;
+  border: 1px solid rgba(255, 255, 255, 1);
+  border-radius: 15px 15px 0px 0px;
+  margin-top: -10px;
+  padding-top: 35px;
+  padding-bottom: 40px;
+  position: relative;
+  width: 100%;
+}
+.modal-message {
+  // background-color: #4caf50 !important;
+}
+.modal-message .card-icon-message {
+  position: fixed;
+  z-index: 1003;
+  margin-top: -60px;
+  left: 25%;
+  right: 25%;
+}
+.border-modal-message {
+  border-radius: 20px !important;
+}

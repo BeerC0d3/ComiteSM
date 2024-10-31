@@ -1,4 +1,5 @@
-﻿using BeerC0d3.Core.Entities.Seguridad;
+﻿using BeerC0d3.Core.Entities.Comite;
+using BeerC0d3.Core.Entities.Seguridad;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -42,6 +43,16 @@ namespace BeerC0d3.Infrastructure.Data.Configuration
                    .HasColumnType("varchar")
                    .HasMaxLength(600);
 
+            builder.Property(p => p.FechaRegistro)
+             .HasColumnType("datetime");
+
+            builder.Property(p => p.FechaActivacion)
+              .HasColumnType("datetime");
+
+            builder.Property(p => p.CodigoActivacion)
+                   .HasColumnType("varchar")
+                   .HasMaxLength(200);
+
             builder
             .HasMany(p => p.Roles)
             .WithMany(p => p.Usuarios)
@@ -62,6 +73,40 @@ namespace BeerC0d3.Infrastructure.Data.Configuration
             builder.HasMany(p => p.RefreshTokens)
              .WithOne(p => p.Usuario)
              .HasForeignKey(p => p.UsuarioId);
+
+            builder
+           .HasMany(p => p.Secciones)
+           .WithMany(p => p.Usuarios)
+           .UsingEntity<UsuarioSeccion>(
+               j => j
+                   .HasOne(pt => pt.Seccion)
+                   .WithMany(t => t.UsuarioSecciones)
+                   .HasForeignKey(pt => pt.SeccionId),
+               j => j
+                   .HasOne(pt => pt.Usuario)
+                   .WithMany(p => p.UsuarioSecciones)
+                   .HasForeignKey(pt => pt.UsuarioId),
+               j =>
+               {
+                   j.HasKey(t => new { t.UsuarioId, t.SeccionId });
+               });
+
+            builder
+          .HasMany(p => p.Periodos)
+          .WithMany(p => p.Usuarios)
+          .UsingEntity<UsuarioPeriodo>(
+              j => j
+                  .HasOne(pt => pt.Periodo)
+                  .WithMany(t => t.UsuarioPeriodos)
+                  .HasForeignKey(pt => pt.PeriodoId),
+              j => j
+                  .HasOne(pt => pt.Usuario)
+                  .WithMany(p => p.UsuarioPeriodos)
+                  .HasForeignKey(pt => pt.UsuarioId),
+              j =>
+              {
+                  j.HasKey(t => new { t.UsuarioId, t.PeriodoId });
+              });
         }
     }
       
